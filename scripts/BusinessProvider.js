@@ -114,3 +114,21 @@ const businesses = [
   export const businessBook = () => {
       return businesses.slice();
   }
+
+  export const nyBusinesses = businesses.filter(firmObject => {
+    if (firmObject.addressStateCode == 'NY') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  });
+
+  export const manufacturers = businesses.filter(firmObject => {
+    if (firmObject.companyIndustry == 'Manufacturing') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  });

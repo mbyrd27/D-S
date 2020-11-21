@@ -1,3 +1,5 @@
 ## Dotard & Simbleton
 
-Moar practice from NSS resources involving .js modules and array methods.
+Array Method practice
+
+TODO: Refactor BusinessList.js depending on what requirements may come next
