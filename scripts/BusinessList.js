@@ -1,10 +1,12 @@
-import { businessBook, nyBusinesses, manufacturers } from "./BusinessProvider.js"
+import { businessBook, nyBusinesses, manufacturers, purchAgents } from "./BusinessProvider.js"
 import { Business } from "./Business.js"
+import { PurchaseAgent } from "./PurchasingAgents.js"
 
 
 const contentTarget = document.querySelector(".business")
 const nyContent = document.querySelector(".businessList--newYork")
 const manuContent = document.querySelector(".businessList--manufacturers")
+const purchaseContent = document.querySelector(".businessList--purchAgents")
 
 export const BusinessList = () => {
     const businessArray = businessBook()
@@ -30,5 +32,14 @@ export const manuBusinessList = () => {
 
     businessArray.forEach((businessObject) => {
         manuContent.innerHTML += Business(businessObject)
+    });
+}
+
+export const purchAgentList = () => {
+    const purchAgentArr = purchAgents;
+    purchaseContent.innerHTML = "<h1>Purchasing Agents</h1>"
+
+    purchAgentArr.forEach((businessObject) => {
+        purchaseContent.innerHTML += PurchaseAgent(businessObject)
     });
 }

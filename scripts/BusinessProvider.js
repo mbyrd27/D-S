@@ -132,3 +132,11 @@ const businesses = [
       return false;
     }
   });
+
+  export const purchAgents = businesses.map(firmObject => {
+    return {
+      fullName: `${firmObject.purchasingAgent.nameFirst} ${firmObject.purchasingAgent.nameLast}`,
+      company: `${firmObject.companyName}`,
+      phoneNumber: `${firmObject.phoneWork}`
+    }
+  });
