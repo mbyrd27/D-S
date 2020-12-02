@@ -116,21 +116,11 @@ const businesses = [
   }
 
   export const nyBusinesses = businesses.filter(firmObject => {
-    if (firmObject.addressStateCode == 'NY') {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return firmObject.addressStateCode == 'NY' 
   });
 
   export const manufacturers = businesses.filter(firmObject => {
-    if (firmObject.companyIndustry == 'Manufacturing') {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return firmObject.companyIndustry == 'Manufacturing' 
   });
 
   export const purchAgents = businesses.map(firmObject => {
